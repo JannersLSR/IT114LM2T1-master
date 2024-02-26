@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Exercise5.master.cs"  CodeBehind="Exercise5.master.cs" Inherits="Module2Topic1.Exercise5" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        * {
+            font-family: Helvetica;
+        }
+        p {
+            text-align: center;
+        }
+        h1, h3 {
+            text-align:center;
+        }
+        #navContainer {
+            padding: 5px;
+            text-align:center;
+            font-size:x-large;
+            display:flex;
+            justify-content: space-evenly;
+        }
+        a {
+            
+            color: black;
+            border: 2px solid black;
+            border-radius: 10px 10px;
+            text-decoration:none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Exercises:</h1>
+        <nav id="navContainer">
+            <a href="Exercise1.aspx">Exercise #1</a>
+            <a href="Exercise2.aspx">Exercise #2</a>
+            <a href="Exercise3.aspx">Exercise #3</a>
+            <a href="Exercise4.aspx">Exercise #4</a>
+        </nav>
+        <main id="mainContainer">
+            <h1>Reflection:</h1>
+            <h3>How would you compare plain HTML to ASP.NET WebForms.</h3>
+            <p> In my experience, comparing plain HTML to ASP.NET WebForms, theres really no difference upfront. Plain HTML provides a straightforward and lightweight approach to crafting static web pages, offering simplicity and ease of understanding. It's well-suited for static content presentation but lacks dynamic capabilities. On the other hand, ASP.NET WebForms introduces a higher level of abstraction, providing a more structured and event-driven framework for building dynamic web applications. The declarative nature of WebForms allows for rapid development through the use of server controls, making it easier to manage complex UI interactions. However, this convenience comes with the trade-off of generating more extensive ViewState and a potentially heavier page lifecycle, impacting performance. While HTML caters to a more manual and hands-on coding style, ASP.NET WebForms leverages a component-based model, offering productivity gains but requiring a nuanced understanding of its lifecycle and control architecture. Both approaches have their merits, and the choice often depends on the specific project requirements and developer preferences.</p>
+            <hr />
+            <h3> The code behind (C#) and JavaScript seem to share many use cases. When should you implement logic in the code behind and when should you implement logic in JavaScript? Provide examples.</h3>
+            <p>In my programming endeavors, deciding between implementing logic in the code-behind (C#) or in JavaScript involves considering the nature of the functionality and the context of its execution. I typically resort to the code-behind for server-side operations, such as database interactions or complex business logic, where security and data integrity are paramount. For instance, when handling user authentication or performing server-side validations, C# in the code-behind provides a robust and secure environment. On the other hand, JavaScript excels in client-side interactions and dynamic user interfaces. I lean towards JavaScript when dealing with tasks like form validations, dynamic content updates without a page refresh, or enhancing the user experience with interactive features. This dual approach allows me to leverage the strengths of each language, ensuring a well-balanced and efficient implementation that aligns with the specific requirements of the application.</p>
+            <hr />
+            <h3>Explain what post backs are.</h3>
+            <p> Postbacks refer to a mechanism where an entire web page is sent back to the server for processing and then returned to the client. This occurs in response to an event triggered by the user, such as clicking a button or interacting with a form. When a postback happens, the server re-executes the entire page lifecycle, including processing the user's input and generating a new version of the page. While this approach facilitates the preservation of server-side state, it can sometimes lead to increased server load and longer response times, especially in complex applications. Being mindful of when to utilize postbacks is crucial to strike a balance between maintaining state and optimizing the overall performance of a web application.</p>
+        </main>
+        <footer>
+            <p>ↀ Copyright &#169; John Robert C. Santos 2024 ⟡</p>
+        </footer>
+    </form>
+</body>
+</html>
